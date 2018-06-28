@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Survey</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <h1 id="title">Travel Survey</h1>
+<div id="form-outer">
+  <p id="description">
+    Tell us a little about your travel history
+  </p>
+  <form action="https://crossorigin.me/https://freecodecamp.com" id="survey-form" method="GET">
+    <div class="row">
+       <span class="question">
+         <label for="name" id="name-label">* Name: </label>
+       </span>
+       <span class="answer">
+         <input type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+       </span>
+    </div>
+    <div class="row">
+      <span class="question">
+        <label id="email-label" for="email">* Email: </label>
+      </span>
+      <span class="answer">
+        <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your email">
+      </span>
+    </div>
+    <div class="row">
+      <span class="question">
+        <label for="age" id="number-label">* Age: </label>
+      </span>
+      <span class="answer">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+      </span>
+    </div>
+    <div class="row">
+      <span class="question">
+        <label for="international" id="international-label">
+          Have you ever traveled internationally?
+        </label>
+      </span>
+      <span class="answer">
+        <select name="international" id="dropdown" class="dropdown">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </span>
+    </div>
+    <div class="row">
+      <span class="question">
+        <label for="thisYear" id="thisYear-label">
+          How likely are you to travel internationally this year?
+        </label>
+      </span>
+      <span class="answer">
+        <ul style="list-style: none;">
+          <li class="radio"><label>Definitely<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Maybe<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>Not sure<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </span>
+    </div>
+    <div class="row">
+      <span class="question">
+       <label for="continents" id="continents-label">
+         Which continents are you interested in visiting?
+        </label>
+      </span>
+      <span class="answer">
+        <ul id="continents" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">North America</label></li>
+          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">South America</li>
+          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Europe</label></li>
+          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Asia</label></li>
+          <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Australia</label></li>
+          <li class="checkbox"><label><input name="prefer" value="6" type="checkbox" class="userRatings">Africa</label></li>
+          <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Antarctica</label></li>
+      </span>
+    </div>
+    <div class="row">
+      <span class="question">
+        <label for="comments" id="comments-label">
+          Additional information about your travels:
+        </label>
+      </span>
+      <span class="answer">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+      </span>
+    </div>
+      <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
+  </body>
+</html>
